@@ -31,7 +31,7 @@ fs.exists(fileName, (exist) => {
     console.log('exist',exist)
 })
 ```
-```angular2
+```
 // 标准输入输出
 // process.stdin.pipe(process.stdout)
 // 读取文件的 stream 对象
@@ -39,7 +39,7 @@ var readStream = fs.createReadStream(fileName);
 // 写入文件的 stream 对象
 var writeStream = fs.createWriteStream(fileName1);
 // 拷贝文件
-readStream.pipe(readStream);
+readStream.pipe(writeStream);
 readStream.on('data',function(){
     console.log()
 })
